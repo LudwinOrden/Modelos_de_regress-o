@@ -1,0 +1,47 @@
+#Entrada de dados
+
+teste = c(8, 9, 7, 8, 6, 8, 5, 5, 6, 7, 4, 7, 3, 5, 3)
+experiencia = c(5, 2, 2, 1, 4, 4, 3, 3, 1, 3, 4, 2, 3, 1, 2)
+vendas = c(51, 50, 48, 32, 30, 30, 29, 27, 24, 24, 24, 23, 21, 21, 16)
+zona = c("Norte", "Sul", "Sul", "Oeste", "Sul", "Oeste", "Norte", "Norte", "Oeste",
+"Oeste", "Sul", "Norte", "Sul", "Oeste", "Norte")
+
+#Summario
+
+summary(teste)
+summary(experiencia)
+summary(vendas)
+
+#Plot
+
+plot(teste, experiencia, pch = 16)
+plot(teste, vendas, pch = 16)
+plot(vendas, experiencia, pch = 16)
+
+#correlação
+
+cor(teste, experiencia, method = "pearson")
+cor(teste, experiencia, method = "spearman")
+cor(teste, vendas, method = "pearson")
+cor(teste, vendas, method = "spearman")
+cor(vendas, experiencia, method = "pearson")
+cor(vendas, experiencia, method = "spearman")
+
+#histograma
+
+hist(teste)
+hist(experiencia)
+hist(vendas)
+
+#Box-Plot
+
+boxplot(teste)
+boxplot(experiencia)
+boxplot(vendas)
+
+#Regressao Linear
+
+lm(teste ~ experiencia)
+lm(vendas ~ teste)
+lm(vendas ~ experiencia)
+
